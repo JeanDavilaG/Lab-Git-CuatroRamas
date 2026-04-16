@@ -1,8 +1,7 @@
-import java.util.stream.LongStream;
-
-// V3: Funcional
 public class Factorial {
     public static long calcular(int n) {
-        return LongStream.rangeClosed(1, n).reduce(1, (a, b) -> a * b);
+        long res = 1;
+        for (int i = 1; i <= n; i++) res *= i;
+        return res;
     }
 }
